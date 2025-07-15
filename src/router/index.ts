@@ -9,6 +9,16 @@ const router = createRouter({
       name: "home",
       component: HomeView,
     },
+    {
+      path: "/chat/:roomId",
+      name: "chat",
+      component: () => import("../views/ChatRoom.vue"),
+      props: true, // Enable route params as props
+    },
+    {
+      path: "/:pathMatch(.*)*", // Catch-all route for unknown paths
+      redirect: "/", // Redirect any unknown paths to home
+    },
   ],
 });
 
