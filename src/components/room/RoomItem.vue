@@ -13,9 +13,10 @@ defineProps<{
 
 <template>
   <RouterLink
-    :to="`/room/${roomId}`"
+    :to="`/chat/${roomId}`"
     class="p-2 flex items-center gap-4 transition-colors hover:bg-accent/50"
     aria-label="Room Item"
+    active-class="bg-primary/40 hover:bg-primary/50"
   >
     <div class="rounded-full w-16 h-14 bg-accent overflow-hidden relative">
       <img
