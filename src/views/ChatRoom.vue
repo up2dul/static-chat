@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ArrowUp } from "lucide-vue-next";
-import { ref, watch } from "vue";
+import { nextTick, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import ChatList from "@/components/chat/ChatList.vue";
+import type ChatList from "@/components/chat/ChatList.vue";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import roomList from "@/data/list-rooms.json";
@@ -14,15 +14,20 @@ const roomId = route.params.roomId;
 const currentRoom = ref(
   roomList.data.customer_rooms.find(room => room.room_id === roomId),
 );
+
+const chatListRef = ref<InstanceType<typeof ChatList> | null>(null);
+
 watch(
   () => route.params.roomId,
-  newRoomId => {
+  async newRoomId => {
     if (newRoomId) {
       const newRoom = roomList.data.customer_rooms.find(
         room => room.room_id === newRoomId,
       );
       if (newRoom) {
         currentRoom.value = newRoom;
+        await nextTick();
+        chatListRef.value?.scrollToBottom();
       } else {
         router.push("/"); // Redirect to home if room not found
       }
@@ -34,10 +39,12 @@ watch(
 const messagesStore = useMessagesStore();
 
 const newMessage = ref("");
-const sendMessage = () => {
+const sendMessage = async () => {
   if (newMessage.value.trim()) {
     messagesStore.addMessage(newMessage.value);
     newMessage.value = "";
+    await nextTick();
+    chatListRef.value?.scrollToBottom();
   }
 };
 </script>
@@ -55,6 +62,6 @@ const sendMessage = () => {
       </Button>
     </div>
 
-    <ChatList class="h-[calc(100%-96px)] relative" />
+    <ChatList ref="chatListRef" class="h-[calc(100%-96px)] relative" />
   </div>
 </template>
