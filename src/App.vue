@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
+import RoomList from "./components/room/RoomList.vue";
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-      </nav>
-    </div>
-  </header>
+  <main class="w-full h-screen flex">
+    <section class="w-1/5 md:w-2/5 lg:w-1/2">
+      <RoomList />
+    </section>
 
-  <RouterView />
+    <section class="w-4/5 md:w-3/5 lg:w-1/2 bg-accent">
+      <RouterView />
+    </section>
+  </main>
 </template>
