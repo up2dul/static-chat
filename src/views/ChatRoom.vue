@@ -43,6 +43,7 @@ const sendMessage = () => {
 </script>
 
 <template>
+  <!-- 86px = height of container that contains input and send button -->
   <div class="relative h-full pb-[86px]">
     <div class="bg-background px-4 py-6 flex items-center border-b-2">
       <h1 class="text-lg font-bold">{{ currentRoom?.name }}</h1>

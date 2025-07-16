@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
 import type { Message } from "@/lib/types";
 import { cn, parseDateTime } from "@/lib/utils";
 
