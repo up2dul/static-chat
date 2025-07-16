@@ -16,3 +16,8 @@ export function parseDate(dateString: string): string {
     return date.toLocaleDateString();
   }
 }
+
+export function parseDateTime(dateString: string): string {
+  const date = new Date(dateString);
+  return date.toLocaleString();
+}
