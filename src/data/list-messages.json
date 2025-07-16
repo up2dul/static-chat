@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Hello! I need help with my order.",
+    "timestamp": "2025-04-23T03:45:10Z",
+    "type": "received"
+  },
+  {
+    "id": 2,
+    "text": "Hi there! I'd be happy to help you with your order. Could you please provide your order number?",
+    "timestamp": "2025-04-23T03:45:45Z",
+    "type": "sent"
+  },
+  {
+    "id": 3,
+    "text": "Sure! My order number is #ORD-12345",
+    "timestamp": "2025-04-23T03:46:20Z",
+    "type": "received"
+  },
+  {
+    "id": 4,
+    "text": "Let me check that for you right now.",
+    "timestamp": "2025-04-23T03:46:35Z",
+    "type": "sent"
+  },
+  {
+    "id": 5,
+    "text": "I found your order! It's currently being processed and should be shipped within 24 hours. You'll receive a tracking number once it's dispatched.",
+    "timestamp": "2025-04-23T03:47:10Z",
+    "type": "sent"
+  },
+  {
+    "id": 6,
+    "text": "That's great! Thank you so much for your help 😊",
+    "timestamp": "2025-04-23T03:47:45Z",
+    "type": "received"
+  },
+  {
+    "id": 7,
+    "text": "You're welcome! Is there anything else I can help you with today?",
+    "timestamp": "2025-04-23T03:48:00Z",
+    "type": "sent"
+  },
+  {
+    "id": 8,
+    "text": "Actually, yes! Can I change my delivery address?",
+    "timestamp": "2025-04-23T03:48:30Z",
+    "type": "received"
+  },
+  {
+    "id": 9,
+    "text": "Since your order is still being processed, I can help you update the delivery address. What's the new address you'd like to use?",
+    "timestamp": "2025-04-23T03:49:00Z",
+    "type": "sent"
+  },
+  {
+    "id": 10,
+    "text": "The new address is: 123 Main Street, Apt 4B, New York, NY 10001",
+    "timestamp": "2025-04-23T03:49:45Z",
+    "type": "received"
+  },
+  {
+    "id": 11,
+    "text": "Perfect! I've updated your delivery address to 123 Main Street, Apt 4B, New York, NY 10001. You should receive a confirmation email shortly.",
+    "timestamp": "2025-04-23T03:50:30Z",
+    "type": "sent"
+  },
+  {
+    "id": 12,
+    "text": "Excellent! Thanks again for all your help! 👍",
+    "timestamp": "2025-04-23T03:51:00Z",
+    "type": "received"
+  }
+]
