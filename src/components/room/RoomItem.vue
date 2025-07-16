@@ -25,7 +25,7 @@ defineProps<{
         class="object-cover"
       />
     </div>
-    <div class="w-full">
+    <div class="w-full hidden md:block">
       <div class="flex items-center justify-between gap-1">
         <p class="text-lg font-semibold truncate">{{ name }}</p>
         <p class="text-xs text-muted-foreground">{{ lastMessageTime }}</p>

@@ -5,11 +5,11 @@ import RoomList from "./components/room/RoomList.vue";
 
 <template>
   <main class="w-full h-screen flex">
-    <section class="w-1/2">
+    <section class="w-1/5 md:w-2/5 lg:w-1/2">
       <RoomList />
     </section>
 
-    <section class="w-1/2 bg-accent">
+    <section class="w-4/5 md:w-3/5 lg:w-1/2 bg-accent">
       <RouterView />
     </section>
   </main>
