@@ -1,33 +1,69 @@
-# static-chat
+![App screenshot](/public/screenshot.png)
 
-This template should help get you started developing with Vue 3 in Vite.
+> ℹ️ A simple static chat UI application
 
-## Recommended IDE Setup
+> 🌐 Shipped on [Netlify](https://netlify.com). Live Preview: [https://ssachat.netlify.app](https://ssachat.netlify.app)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Table of Contents
 
-## Type Support for `.vue` Imports in TS
+- [Table of Contents](#table-of-contents)
+- [Technologies](#technologies)
+- [Setup Instructions](#setup-instructions)
+  - [1. Prerequisites](#1-prerequisites)
+  - [2. Clone the Repository](#2-clone-the-repository)
+  - [3. Installation](#3-installation)
+- [Usage](#usage)
+  - [Start the development server](#start-the-development-server)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Technologies
 
-## Customize configuration
+Some of the technologies used in this project:
+- 🟩 [Vue 3](https://vuejs.org) - The Progressive JavaScript Framework 
+- ⚡ [Vite](https://vitejs.dev) — The frontend tooling
+- 📦 [Vue Router](https://router.vuejs.org) — Expressive, configurable and convenient routing for Vue.js
+- 💨 [Tailwind CSS v4](https://tailwindcss.com) — Utility-first CSS framework
+- 🔷 [TypeScript](https://typescriptlang.org) — A typed superset of JavaScript
+- 🍍 [Pinia](https://pinia.vuejs.org/) — The intuitive store for Vue.js
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Some additional development tools:
+- 📝 [Biome](https://biomejs.dev) — Code formatter and linter
+- 🔤 [Commitlint](https://commitlint.js.org) — Make sure the commit messages are well formatted
+- 🐶 [Husky](https://typicode.github.io/husky) — A git hooks
+- 📋 [Lint Staged](https://github.com/lint-staged/lint-staged) — Running some scripts before committing
 
-## Project Setup
+## Setup Instructions
 
-```sh
-pnpm install
+### 1. Prerequisites
+
+- [Node.js](https://nodejs.org) `>=18.x`
+- [Bun](https://bun.com) `>=1.x` (recommended as the package manager)
+
+### 2. Clone the Repository
+
+```bash
+git clone https://github.com/up2dul/static-chat.git
+
+# or if using ssh
+git clone git@github.com:up2dul/static-chat.git
 ```
 
-### Compile and Hot-Reload for Development
+### 3. Installation
 
-```sh
-pnpm dev
+Go to the project directory and install dependencies
+```bash
+# Go to the project directory
+cd login-prototype
+
+# Install dependencies
+bun install
 ```
 
-### Type-Check, Compile and Minify for Production
+## Usage
 
-```sh
-pnpm build
+### Start the development server
+
+```bash
+bun dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
