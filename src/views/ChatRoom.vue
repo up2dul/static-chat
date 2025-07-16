@@ -2,9 +2,11 @@
 import { ArrowUp } from "lucide-vue-next";
 import { ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
+import ChatList from "@/components/chat/ChatList.vue";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import roomList from "@/data/list-rooms.json";
+import { useMessagesStore } from "@/stores/messages";
 
 const route = useRoute();
 const router = useRouter();
@@ -28,18 +30,30 @@ watch(
   },
   { immediate: true },
 );
+
+const messagesStore = useMessagesStore();
+
+const newMessage = ref("");
+const sendMessage = () => {
+  if (newMessage.value.trim()) {
+    messagesStore.addMessage(newMessage.value);
+    newMessage.value = "";
+  }
+};
 </script>
 
 <template>
-  <div class="relative h-full">
+  <div class="relative h-full pb-[86px]">
     <div class="bg-background px-4 py-6 flex items-center border-b-2">
       <h1 class="text-lg font-bold">{{ currentRoom?.name }}</h1>
     </div>
-    <div class="absolute bottom-0 inset-x-0 bg-background px-4 py-6 flex items-center gap-2 border-t-2">
-      <Input placeholder="Type your message..." />
-      <Button>
+    <div class="absolute z-2 bottom-0 inset-x-0 bg-background px-4 py-6 flex items-center gap-2 border-t-2">
+      <Input placeholder="Type your message..." v-model="newMessage" />
+      <Button @click="sendMessage" class="flex-shrink-0" :disabled="!newMessage.trim()">
         <ArrowUp />
       </Button>
     </div>
+
+    <ChatList class="h-[calc(100%-96px)] relative" />
   </div>
 </template>
