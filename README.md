@@ -52,7 +52,7 @@ git clone git@github.com:up2dul/static-chat.git
 Go to the project directory and install dependencies
 ```bash
 # Go to the project directory
-cd login-prototype
+cd static-chat
 
 # Install dependencies
 bun install
