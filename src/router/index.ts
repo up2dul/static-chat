@@ -12,7 +12,7 @@ const router = createRouter({
     {
       path: "/chat/:roomId",
       name: "chat",
-      component: () => import("../views/ChatRoom.vue"),
+      component: () => import("@/views/ChatRoom.vue"),
       props: true, // Enable route params as props
     },
     {
